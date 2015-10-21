@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link rel="stylesheet" href="css/style.css">
+        <script src="eventsList.json"></script>
+        <script>
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                    results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+            
+            var id = getParameterByName("Event");
+            
+            var event = events[id-1];
+            console.log('Event=' + event.title);
+            
+        </script>
+    
+    </head>
+    
+    <body>
+        <script>
+            document.write("<div> Title : " + event.title + "</div>");
+            document.write("<div> Date : " + event.date + "</div>");
+            document.write("<div> Venue : " + event.venue + "</div>");
+            document.write("<div> Description : " + event.description + "</div>");
+            
+            // document.write("<div class='image' style='background-image: url(" + event.imageURL + ");' id='image_" + event.id + "' > </div>");
+            document.write("<div><img src='" + event.imageURL + "'></div>");
+        </script>
+         
+      
+    
+    </body>
+    
+</html>

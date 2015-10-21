@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="eventsList.json"></script>
+        <script>
+             
+            
+//            var events = [
+//                {id: 1, title: 'Event1', imageURL: 'images/event1.png', date: '02/11/2015', venue: 'Venue1'},
+//                {id: 2, title: 'Event2', imageURL: 'images/event2.ico', date: '02/11/2016', venue: 'Venue2'},
+//                {id: 3, title: 'Event3', imageURL: 'images/event3.png', date: '02/11/2017', venue: 'Venue3'},
+//                {id: 4, title: 'Event4', imageURL: 'images/event4.ico', date: '02/11/2018', venue: 'Venue4'},
+//                {id: 5, title: 'Event5', imageURL: 'images/event5.ico', date: '02/11/2019', venue: 'Venue5'}
+//            ];
+//            
+            var handleMouseClick = function (event) {
+                var id = event.target.getAttribute('id');
+                var eve = events[id-1];
+
+                if(id > 0) {
+                     console.log(eve.title);
+                    location.href = "eventDetail.htm?Page=data&Event=" + eve.id;
+                    //location.href = "eventDetail.htm?Page=data&Event=" + eve.title;
+                    
+                }
+               
+              };
+            
+            var handleMouseOver = function (event) {
+                var id = event.target.getAttribute('id');
+                var eve = events[id-1];
+
+                if(id > 0) {
+                    //console.log(eve.title);
+                    var overlay = document.getElementById('overlay_' + id);
+                    overlay.style.opacity= 1;  
+                    var image = document.getElementById('image_' + id);
+                    
+                }
+               
+              };
+            
+            var handleMouseOut = function (event) {
+                var id = event.target.getAttribute('id');
+                var eve = events[id-1];
+                 if(id > 0) {
+                     //console.log(eve.title);
+                     var overlay = document.getElementById('overlay_' + id);
+                     overlay.style.opacity= 0;  
+                 }
+            };
+
+            var bodyLoaded = function () {
+                var images = document.querySelectorAll(".image"), i;
+                for (i = 0; i < images.length; ++i) {
+                    images[i].addEventListener('mouseover', handleMouseOver);
+                    images[i].addEventListener('mouseout', handleMouseOut);
+                    images[i].addEventListener('click', handleMouseClick);
+                }
+            };
+            
+        </script>
+    
+    </head>
+    
+<body onload="bodyLoaded()">
+    
+    <div id="imageList">
+        
+       <script language="javascript" type="text/javascript">
+            for (var i=0; i < events.length; i++) {
+                var event = events[i];
+                
+                document.write("<div class='image' style='background-image: url(" + event.imageURL + ");' id='image_" + event.id + "' > <div class='overlay' id='overlay_" + event.id + "'><div class='detail' id='"+ event.id + "'>Title: "+   event.title + "<br> Date: " + event.date + "<br> Venue: " + event.venue + "</div></div></div>");
+            }
+        </script>
+        
+    </div>
+ 
+    </body>
+</html>
