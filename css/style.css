@@ -5,10 +5,140 @@ body {
     
 }
 
+
+
+.container { position:relative; padding:0px 0px 0px 50px; }
+
+
+#header { 
+   top:0px; left:0px;
+   height:50px;
+   background: grey;
+}
+
+#corner { 
+   position:absolute;
+   top:0px; left:0px;
+   height:50px;
+   width:50px;
+   background: brown;
+    
+}
+
+#corner img{
+   width: 30px;
+   height: 30px;
+   vertical-align: middle;
+   float: center;
+   margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+/*
+#title { 
+   top:0px; left:50px;
+   height:40px; 
+    font-family: helvetica;
+    font-size: 25px;
+    color: red;
+    margin:10px 0px 0px 50px;
+    vertical-align: middle;
+}
+
+*/
+
+#title { 
+   top:0px; left:50px;
+   height:50px; 
+   
+    margin:0px 0px 0px 50px;
+    vertical-align: middle;
+}
+
+
+
+#title .container3 {
+    float: left;
+    width:40%;
+    height:40px;
+    margin-top: 10px;
+    
+    font-family: helvetica;
+    font-size: 25px;
+    color: red;
+     vertical-align: middle;
+}
+
+#title .container4 {
+    float: right;
+    width:50%;
+    height:50px;
+    margin-right: 50px;
+}
+
+
+
+#sidebar {
+    position:absolute;
+    top:50px; bottom:0px; left:0px;
+    width:50px;
+    background:red;
+}
+
+#content {
+     position:relative;
+    font-size: 0;
+     margin:0px 0px 50px 50px;
+}
+#footer { border:1px solid #000; width:100px; height:20px;
+    margin:5px 0 0 0;
+}
+
+
+
 #imageList {
     font-size: 0;
     width: 1200px;
     margin: 0 auto;
+}
+
+
+.image1 {
+  
+    background-color : transparent;
+    position: relative;
+    background-size: cover;
+    padding: 0px;
+    border: 4px solid transparent;
+/*
+    width: 500px;
+    height: 350px
+        */
+    margin: 4;
+    display: inline-block;
+    opacity: 1;
+    transition: all .1s ease-in;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.image2 {
+    background-color : transparent;
+    position: relative;
+    background-size: cover;
+    padding: 0px;
+    border: 4px solid transparent;
+/*
+    width: 340px;
+    height: 175px
+        */
+    margin: 4;
+    display: inline-block;
+    opacity: 1;
+    transition: all .1s ease-in;
+    overflow: hidden;
+    background-repeat: no-repeat;
 }
 
 
@@ -19,9 +149,10 @@ body {
     background-size: cover;
     padding: 0px;
     border: 4px solid transparent;
-
-    width: 250px;
+/*
+    width: 293px;
     height: 250px
+        */
     margin: 4;
     display: inline-block;
     opacity: 1;
@@ -31,16 +162,16 @@ body {
 }
 
 .overlay {
-  height: 250px;
-  width: 250px;
+  height: 100%;
+  width: 100%;
   background-color : rgba(0,0,0,0.5);
   position: relative;
   /*display: none;*/
   opacity: 0;
   text-align: center;
   -webkit-transition: all 0.1s ease-in;
-    display: inline-block;
-    vertical-align: middle;
+    
+ vertical-align: middle;
 }
 
 
@@ -48,8 +179,37 @@ body {
 .detail {
     font-family: helvetica;
     font-size: 15px;
-    height: 250px;
-    width: 250px;
+   
+    width: 293px;
+     height: 175px;
+    background-color: transparent;
+    color: yellow;
+    position: relative;
+   
+    background-color : transparent;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.detail1 {
+    font-family: helvetica;
+    font-size: 15px;
+    width: 500px;
+    height: 175px;
+    background-color: transparent;
+    color: yellow;
+    position: relative;
+   
+    background-color : transparent;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.detail2 {
+    font-family: helvetica;
+    font-size: 15px;
+    width: 340px;
+    height: 175px;
     background-color: transparent;
     color: yellow;
     position: relative;
@@ -63,6 +223,234 @@ p {
   background-color: yellow; 
 }
 
+
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    width: 50px;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 5px;
+    line-height: 50px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a img{
+   width: 35px;
+   height: 35px;
+   vertical-align: middle;
+   text-align: center;
+}
+
+
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+table#titlebar {
+    padding: 0;
+    vertical-align: middle;
+    text-align: right;
+    position:relative;
+    height: 50px;
+}
+
+
+/* Menu bar style */
+
+ul#menu {
+    padding: 0;
+    vertical-align: middle;
+    text-align: right;
+    position:relative;
+    top:0px; right:0px;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    background-color: transparent;
+    color: white;
+    padding: 5px 5px ;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+}
+
+ul#menu li a img{
+   width: 25px;
+   height: 25px;
+   vertical-align: middle;
+   text-align: center;
+}
+
+ul#menu li a:hover {
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+/*  */
+#title ul#menu1 {
+    padding: 0px;
+    vertical-align: middle;
+    text-align: right;
+    position:relative;
+    top:0px; right:0px;
+}
+
+#title ul#menu1 li {
+    display: inline;
+}
+
+#title ul#menu1 li a {
+    background-color: transparent;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+}
+
+#title ul#menu1 li a img{
+   width: 30px;
+   height: 30px;
+   vertical-align: middle;
+   text-align: center;
+}
+
+#title ul#menu1 li a:hover {
+    background-color: lightgrey;
+}
+
+
+
+
+#wrap {
+   position:relative;
+   top:0px; left:0px;
+   height:50px;
+   background: grey;
+}
+#wrap:after {
+    /* Prevent wrapper from shrinking height, 
+    see http://www.positioniseverything.net/easyclearing.html */
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+#wrap .container2 {
+    float: right;
+    width:200px;
+    height:34px;
+    margin-right: 50px;
+    margin-top: 8px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 10px  10px 10px 10px;
+    vertical-align: middle;
+  white-space: nowrap;
+}
+
+
+
+#wrap .container2 img{
+   width: 30px;
+   height: 30px;
+   vertical-align: middle;
+   float: left;
+   margin-top: 2px;
+    margin-left: 10px;
+    
+}
+
+#wrap .container2 select#actions {
+   width: 150px;
+   height: 30px;
+   border-radius: 4px 4px 4px 4px;
+   margin-top: 2px;
+   float: right;
+   padding-left: 30%;
+    background-color: transparent;
+    border: 0px;
+    margin-right: 10px;
+}
+
+
+#wrap .container1{
+    margin-left: 50px;
+    margin-top: 10px;
+    float: left;
+    width:300px;
+    height:30px;
+  
+}
+
+
+
+
+#wrap .container1 .container-1{
+  width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+#wrap .container1 .container-1 input#search{
+  width: 300px;
+  height: 30px;
+  background: graywhite;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #63717f;
+  padding-left: 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
 
 
 
