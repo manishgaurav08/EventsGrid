@@ -3,83 +3,7 @@
     <head>
         <link rel="stylesheet" href="css/style.css">
         <script src="eventsList.json"></script>
-        <script>
-             
-            
-//            var events = [
-//                {id: 1, title: 'Event1', imageURL: 'images/event1.png', date: '02/11/2015', venue: 'Venue1'},
-//                {id: 2, title: 'Event2', imageURL: 'images/event2.ico', date: '02/11/2016', venue: 'Venue2'},
-//                {id: 3, title: 'Event3', imageURL: 'images/event3.png', date: '02/11/2017', venue: 'Venue3'},
-//                {id: 4, title: 'Event4', imageURL: 'images/event4.ico', date: '02/11/2018', venue: 'Venue4'},
-//                {id: 5, title: 'Event5', imageURL: 'images/event5.ico', date: '02/11/2019', venue: 'Venue5'}
-//            ];
-//            
-            var handleMouseClick = function (event) {
-                var id = event.target.getAttribute('id');
-                var eve = events[id-1];
-
-                if(id > 0) {
-                     console.log(eve.title);
-                    location.href = "eventDetail.htm?Page=data&Event=" + eve.id;
-                    //location.href = "eventDetail.htm?Page=data&Event=" + eve.title;
-                    
-                }
-               
-              };
-            
-            var handleMouseOver = function (event) {
-                var id = event.target.getAttribute('id');
-                var eve = events[id-1];
-
-                if(id > 0) {
-                    //console.log(eve.title);
-                    var overlay = document.getElementById('overlay_' + id);
-                    overlay.style.opacity= 1;  
-                    var image = document.getElementById('image_' + id);
-                    
-                }
-               
-              };
-            
-            var handleMouseOut = function (event) {
-                var id = event.target.getAttribute('id');
-                var eve = events[id-1];
-                 if(id > 0) {
-                     //console.log(eve.title);
-                     var overlay = document.getElementById('overlay_' + id);
-                     overlay.style.opacity= 0;  
-                 }
-            };
-
-            var bodyLoaded = function () {
-                var images = document.querySelectorAll(".image"), i;
-
-                
-                for (i = 0; i < images.length; ++i) {
-                    images[i].addEventListener('mouseover', handleMouseOver);
-                    images[i].addEventListener('mouseout', handleMouseOut);
-                    images[i].addEventListener('click', handleMouseClick);
-                }
-                
-                var images1 = document.querySelectorAll(".image1"), i;
-                
-                for (i = 0; i < images1.length; ++i) {
-                    images1[i].addEventListener('mouseover', handleMouseOver);
-                    images1[i].addEventListener('mouseout', handleMouseOut);
-                    images1[i].addEventListener('click', handleMouseClick);
-                }
-                
-                var images2 = document.querySelectorAll(".image2"), i;
-                
-                for (i = 0; i < images2.length; ++i) {
-                    images2[i].addEventListener('mouseover', handleMouseOver);
-                    images2[i].addEventListener('mouseout', handleMouseOut);
-                    images2[i].addEventListener('click', handleMouseClick);
-                }
-            };
-            
-        </script>
-    
+        <script src="app.js"></script>
     </head>
     
 <body onload="bodyLoaded()">
@@ -87,16 +11,16 @@
     <div class="container">
         
         <div id="corner">
-            <img src="images/menu5.png" >
+            <img src="images/menu5.png"  title="Company">
         </div>
         
         <div id="wrap">
             <div class="container1"> 
                 
-                      <div class="container-1">
-                          <span class="icon"><i class="fa fa-search"></i></span>
-                          <input type="search" id="search" placeholder="Search..." />
-                      </div>
+              <div class="container-1">
+                  <span class="icon"><i class="fa fa-search"></i></span>
+                  <input type="search" id="search" placeholder="Search..." />
+              </div>
                 
             </div>
             
@@ -112,37 +36,25 @@
               
         </div>
         
-        <!--
-        <div id="header">
-            <ul id="menu">
-              <li><a href="#"><img src="images/menu1.png" > </a></li>
-              <li><a href="#"><img src="images/menu2.png" ></a></li>
-              <li><a href="#"><img src="images/menu3.png" ></a></li>
-            </ul>  
-        </div>
-
--->
-        
         
         <div id="sidebar">
+            
               <ul class="sidebar-nav">
-                
                 <li>
-                    <a href="#"><img src="images/menu2.png" > </a>
+                    <a href="#"><img src="images/menu2.png" title="Home"> </a>
                 </li>
                 <li>
-                    <a href="#"><img src="images/menu3.png" > </a>
+                    <a href="#"><img src="images/menu3.png"  title="Profile"> </a>
                 </li>
                 <li>
-                    <a href="#"><img src="images/menu4.png" > </a>
+                    <a href="#"><img src="images/menu4.png"  title="Location"> </a>
                 </li>
                 <li>
-                    <a href="#"><img src="images/menu5.png" > </a>
+                    <a href="#"><img src="images/menu5.png"  title="Report"> </a>
                 </li>
                 <li>
-                    <a href="#"><img src="images/menu6.png" > </a>
+                    <a href="#"><img src="images/menu6.png"  title="Graph"> </a>
                 </li>
-               
             </ul>
             
             <br><br><br><br>
@@ -150,16 +62,14 @@
             
             <ul class="sidebar-nav">
                 <li>
-                    <a href="#"><img src="images/menu1.png" > </a>
+                    <a href="#"><img src="images/menu1.png"  title="Pics"> </a>
                 </li>
                 <li>
-                    <a href="#"><img src="images/menu2.png" > </a>
+                    <a href="#"><img src="images/menu2.png"  title="Graph"> </a>
                 </li>
                 <li>
-                    <a href="#"><img src="images/menu3.png" > </a>
+                    <a href="#"><img src="images/menu3.png"  title="Analysis"> </a>
                 </li>
-                
-               
             </ul>
         </div>
         <div id="title">
@@ -168,9 +78,9 @@
             </div>
             <div class="container4"> 
                 <ul id="menu">
-                  <li><a href="#"><img src="images/menu1.png" > </a></li>
-                  <li><a href="#"><img src="images/menu2.png" ></a></li>
-                  <li><a href="#"><img src="images/menu3.png" ></a></li>
+                  <li><a href="#"><img src="images/menu1.png"  title="Icons"> </a></li>
+                  <li><a href="#"><img src="images/menu2.png"  title="List"></a></li>
+                  <li><a href="#"><img src="images/menu3.png"  title="Detail"></a></li>
                 </ul>
             </div>
         </div>
@@ -180,10 +90,6 @@
             for (var i=0; i < events.length; i++) {
                 var event = events[i];
                 
-                
-                
-//                document.write("style='background-image: url(" + event.imageURL + ");' id='image_" + event.id + "' > <div class='overlay' id='overlay_" + event.id + "'><div class='detail' id='"+ event.id + "'>Title: "+   event.title + "<br> Date: " + event.date + "<br> Venue: " + event.venue + "</div></div></div>");
-                
                 if(i===0) {
                      document.write("<div class='image1' style='background-image: url(" + event.imageURL + ");' id='image_" + event.id + "' > <div class='overlay' id='overlay_" + event.id + "'><div class='detail1' id='"+ event.id + "'>Title: "+   event.title + "<br> Date: " + event.date + "<br> Venue: " + event.venue + "</div></div></div>");
                 } else if(i > 0 && i < 3){
@@ -192,40 +98,13 @@
                    document.write("<div class='image' style='background-image: url(" + event.imageURL + ");' id='image_" + event.id + "' > <div class='overlay' id='overlay_" + event.id + "'><div class='detail' id='"+ event.id + "'>Title: "+   event.title + "<br> Date: " + event.date + "<br> Venue: " + event.venue + "</div></div></div>");
                 }
                   
-                
-//                 document.write("style='background-image: url(" + event.imageURL + ");' id='image_" + event.id + "' > <div class='overlay' id='overlay_" + event.id + "'><div class=";
-//                                
-//                if(i===0) {
-//                     document.write("'detail1'");
-//                } else if(i > 0 && i < 3){
-//                    document.write("'detail2'");
-//                }else {
-//                    document.write("'detail'");
-//                }
-//                                
-//                document.write(" id='"+ event.id + "'>Title: "+   event.title + "<br> Date: " + event.date + "<br> Venue: " + event.venue + "</div></div></div>");
             }
         </script>
         
         </div>
-        <div id="footer"></div>
     </div>
     
-    <!--
-    
-    <div id="imageList">
-        
-       <script language="javascript" type="text/javascript">
-            for (var i=0; i < events.length; i++) {
-                var event = events[i];
-                
-                document.write("<div class='image' style='background-image: url(" + event.imageURL + ");' id='image_" + event.id + "' > <div class='overlay' id='overlay_" + event.id + "'><div class='detail' id='"+ event.id + "'>Title: "+   event.title + "<br> Date: " + event.date + "<br> Venue: " + event.venue + "</div></div></div>");
-            }
-        </script>
-        
-    </div>
-    
-    -->
+
  
     </body>
 </html>
